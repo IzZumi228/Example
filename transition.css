@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.transition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+}
+
+.content{
+    height: 200px;
+    width: 0;
+    background-color: black;
+    animation: transition 0.5s ease-in forwards 0.5s;
+}
+
+
+.sorry{
+    display: block;
+    position: absolute;
+    color: black;
+    font-size: 30px;
+    font-family: 'Major Mono Display', monospace;
+    margin: -115px 0 0 300px;
+}
+
+
+a{
+    position: absolute;
+    font-size: 50px;
+    font-family: 'Major Mono Display', monospace;
+    right: 25px;
+    bottom: 50px;
+    color: black;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+a:hover{
+    background-size: 100% 2px;
+
+}
+
+
+
+
+@keyframes transition{
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 100%;
+    }
+}

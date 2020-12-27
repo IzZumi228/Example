@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Major Mono Display', monospace;
+}
+
+.intro{
+    font-family: 'Shadows Into Light', cursive;
+    text-align: center;
+}
+
+.just{
+    transition: 0.5s;
+}
+
+
+.just:hover{
+    font-size: 30px;
+}
+
+.fall{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 100px;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 50px;
+}
+
+
+.btn{
+    height: 70px;
+    width: 200px;
+    margin-top: 100px;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    font-family: 'Major Mono Display', monospace;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    cursor: pointer;
+    border: black solid 1px;
+    background-color: white;
+    color: black;
+}
+
+.ok{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.ideas{
+    font-size: 50px;
+    margin-top: 50px;
+    margin-left: 1050px;
+    position: absolute;
+}
+
+.ideas a{
+    color: black;
+    text-decoration: none;
+}
+
+
+@keyframes fall{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(500px);
+    }
+}
+
+
+.falling{
+    animation: fall ease-in 0.5s forwards;
+}
+
+
+

@@ -1,0 +1,442 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Major Mono Display', monospace;
+}
+body{
+    background-color: black;
+}
+
+
+/* Два шара в начале */
+.circle, .circle_1{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.circle{
+    position: absolute;
+    left: 0;
+    top: 45%;
+    animation: collide 0.5s ease-in forwards 0.2s;
+}
+
+.circle_1{
+    position: absolute;
+    right: 0;
+    top: 45%;
+    animation: collide_reverse 0.5s ease-in forwards 0.2s;
+}
+
+
+/* Кнопка ! */
+.btn_circle{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 100%;
+    font-size: 50px;
+    top: 45%;
+    left: 635px;
+    opacity: 0;
+    animation: btn_opacity 0.5s ease-in forwards 0.6s;
+    transition: 0.1s;
+}
+
+/* Черный увеличивающийся шар */
+.black_circle_big{
+    position: absolute;
+    display: block;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border-radius: 100%;
+    top: 45%;
+    left: 635px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Клон черного увеличивающегося шара */
+.black_circle_big_clone{
+    position: absolute;
+    display: block;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    border-radius: 100%;
+    top: 45%;
+    left: 635px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+
+/* Маленькие шарики */
+.black_circles1, .black_circles2, .black_circles3, .black_circles4, .black_circles5, .black_circles6{
+    position: absolute;
+    display: block;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.black_circles1{
+    top: 27%;
+    left: 480px;
+    visibility: hidden;
+}
+
+.black_circles2{
+    top: 22%;
+    left: 670px;
+    visibility: hidden;
+}
+
+
+.black_circles3{
+    top: 36%;
+    left: 870px;
+    visibility: hidden;
+}
+
+
+.black_circles4{
+    top: 65%;
+    left: 465px;
+    visibility: hidden;
+}
+
+
+.black_circles5{
+    top: 70%;
+    left: 845px;
+    visibility: hidden;
+}
+
+.black_circles6{
+    top: 75%;
+    left: 535px;
+    visibility: hidden;
+}
+
+/* Каждое фраза цитаты */
+.letter1, .letter2, .letter3, .letter4, .letter5{
+    position: absolute;
+    left: 35%;
+    font-size: 25px;
+    visibility: hidden;
+    color: white;
+}
+/* Кнопка "Альберт Эйнштейн" */
+.alb{
+    position: absolute;
+    font-size: 30px;
+    top: 85%;
+    left: 75%;
+    background-color: black;
+    color: white;
+    opacity: 0;
+}
+
+/* Анимация падающего снега */
+.snow_Con{
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.snow{
+    width: 100%;
+    height: 100%;
+    background-image: url(imgs/15825154.png), url(imgs/89961317.png), url(imgs/21791255.png);
+    animation: snow 10s linear infinite 1s;
+}
+
+/* разные классы для добавления и удаления*/
+.gg{
+    animation: bgc ease 0.6s forwards;
+}
+.jj{
+    visibility: hidden;
+}
+.kk{
+    animation: opacity ease 0.2s forwards 28s;
+}
+.hh{
+    animation: become 20s ease forwards 2s;
+}
+
+
+
+.yy{
+    animation: come1 1s ease-in-out 1s infinite;
+}
+.uu{
+    animation: come2 1s ease-in-out 1.3s infinite;
+}
+.ii{
+    animation: come3 1s ease-in-out 1.8s infinite;
+}
+.oo{
+    animation: come4 1s ease-in-out 2.7s infinite;
+}
+.pp{
+    animation: come5 1s ease-in-out 3.6s infinite;
+}
+.aa{
+    animation: come6 1s ease-in-out 4.2s infinite;
+}
+
+
+.bb{
+    animation: clone_opacity 2s ease forwards;
+}
+
+
+
+.ss{
+    left: 37%;
+    animation: fall1 1s ease forwards 22s;
+}
+.dd{
+    animation: fall2 1s ease forwards 23s;
+}
+.ff{
+    left: 30%;
+    animation: fall3 1s ease forwards 24s;
+}
+.zz{
+    left: 37%;
+    animation: fall4 1s ease forwards 25s;
+}
+.xx{
+    animation: fall5 1s ease forwards 26s;
+}
+
+
+/* Анимация двух шаров в начале */
+@keyframes collide{
+    0%{
+        transform: translateX(0%);
+        opacity: 100%;
+    }
+    80%{
+        opacity: 90%;
+    }
+    100%{
+        transform: translateX(635px);
+        opacity: 0%;
+    }
+}
+
+@keyframes collide_reverse{
+    0%{
+        transform: translateX(0%);
+        opacity: 100%;
+    }
+    80%{
+        opacity: 90%;
+    }
+    100%{
+        transform: translateX(-635px);
+        opacity: 0%;
+    }
+}
+
+/* Анимация появления кнопки ! */
+@keyframes btn_opacity{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+/* Анимация смена фона */
+@keyframes bgc{
+    0%{
+        background-color: #000;
+    }
+    100%{
+        background-color: #fff;
+    }
+}
+
+
+
+
+
+/* Анимация увеличения шара */
+@keyframes become{
+    0%{
+        visibility: visible;
+        opacity: 100%;
+    }
+    100%{
+        transform: translate(-230px, -215px);
+        visibility: visible;
+        opacity: 100%;
+        height: 510px;
+        width: 510px;
+    }
+}
+/* Анимация клона шара */
+@keyframes clone_opacity{
+    0%{
+        visibility: visible;
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+        visibility: hidden;
+    }
+}
+
+
+@keyframes opacity{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+
+
+/* Анимация маленьких шаров */
+@keyframes come1{
+    0%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(165px, 165px);
+        visibility: visible;
+    }
+}
+@keyframes come2{
+    0%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translateY(200px);
+        visibility: visible;
+    }
+}
+@keyframes come3{
+    0%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(-165px, 115px);
+        visibility: visible;
+    }
+}
+@keyframes come4{
+    0%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(175px, -110px);
+        visibility: visible;
+    }
+}
+@keyframes come5{
+    0%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(-140px, -130px);
+        visibility: visible;
+    }
+}
+@keyframes come6{
+    0%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(115px, -170px);
+        visibility: visible;
+    }
+}
+
+
+/* Анимация падения фраз цитаты */
+@keyframes fall1{
+    0%{
+        visibility: visible;
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(150px);
+        visibility: visible;
+    }
+}
+
+@keyframes fall2{
+    0%{
+        visibility: visible;
+        transform: translateY(0px);
+    }
+    100%{
+        visibility: visible;
+        transform: translateY(230px);
+    }
+}
+
+
+@keyframes fall3{
+    0%{
+        visibility: visible;
+        transform: translateY(0px);
+    }
+    100%{
+        visibility: visible;
+        transform: translateY(310px);
+    }
+}
+
+
+@keyframes fall4{
+    0%{
+        visibility: visible;
+        transform: translateY(0px);
+    }
+    100%{
+        visibility: visible;
+        transform: translateY(390px);
+    }
+}
+
+
+@keyframes fall5{
+    0%{
+        visibility: visible;
+        transform: translateY(0px);
+    }
+    100%{
+        visibility: visible;
+        transform: translateY(470px);
+    }
+}
+
+/* Анимация снега */
+@keyframes snow {
+    0%{
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    } 
+    100%{background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}

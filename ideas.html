@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideas</title>
+    <link rel="stylesheet" href="ideas.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Два белых шара в начале -->
+    <div class="circle"></div>
+    <div class="circle_1"></div>
+    <!-- Кнопка ! -->
+    <button class="btn_circle" onclick="change()">!</button>
+
+    <!-- Черный Увеличивающийся Шар -->
+    <div class="black_circle_big"></div>
+    <div class="black_circle_big_clone"></div>
+
+            
+    <!-- Маленькие шары -->
+    <div class="black_circles1"></div>
+    <div class="black_circles2"></div>
+    <div class="black_circles3"></div>
+    <div class="black_circles4"></div>
+    <div class="black_circles5"></div>
+    <div class="black_circles6"></div>
+    <!-- Цитата -->
+    <p class="motivation">
+        <p class="letter1">"I am thankful</p>
+        <p class="letter2">for all</p>
+        <p class="letter3">of those who said NO to me</p>
+        <p class="letter4">It’s because of them</p>
+        <p class="letter5">I’m doing it myself"</p>
+    </p>
+    <!-- Снег -->
+        <div class="snow_Con jj">
+            <div class="snow"></div>
+        </div>
+   
+
+
+        <!-- Кнопка Альберт Эйнштейн -->
+    <button class="alb" onclick="winter()">Albert Einstein</button>
+
+
+    <script>
+        var bgcolor = document.querySelector("body");
+        var btnop = document.querySelector(".btn_circle")
+
+        var blackCircle = document.querySelector(".black_circle_big")
+        var cloneCircle = document.querySelector(".black_circle_big_clone")
+        var Albert = document.querySelector(".alb")
+        var snow = document.querySelector(".snow_Con")
+
+        var b1 = document.querySelector(".black_circles1")
+        var b2 = document.querySelector(".black_circles2")
+        var b3 = document.querySelector(".black_circles3")
+        var b4 = document.querySelector(".black_circles4")
+        var b5 = document.querySelector(".black_circles5")
+        var b6 = document.querySelector(".black_circles6")
+
+        var lett1 = document.querySelector(".letter1")
+        var lett2 = document.querySelector(".letter2")
+        var lett3 = document.querySelector(".letter3")
+        var lett4 = document.querySelector(".letter4")
+        var lett5 = document.querySelector(".letter5")
+
+
+
+
+        function change(){
+            bgcolor.classList.add("gg")
+            btnop.classList.add("jj")
+            Albert.classList.add("kk")
+
+            blackCircle.classList.add("hh")
+            cloneCircle.classList.add("bb")
+
+            b1.classList.add("yy")
+            b2.classList.add("uu")
+            b3.classList.add("ii")
+            b4.classList.add("oo")
+            b5.classList.add("pp")
+            b6.classList.add("aa")
+
+            lett1.classList.add("ss")
+            lett2.classList.add("dd")
+            lett3.classList.add("ff")
+            lett4.classList.add("zz")
+            lett5.classList.add("xx")
+        }
+        function winter(){
+            bgcolor.classList.remove("gg")
+            Albert.classList.add("jj")
+            snow.classList.remove("jj")
+        }
+        
+    </script>
+</body>
+</html>
